@@ -49,28 +49,25 @@ let book4 = {
     title: "Whitefang2",
     pageCount: 42,
     genre: "adventure",
-    authors: {
-        name: "Olyaua",
-        age: 29
-    }
+    authors: [
+        {name: "Olyaua", age: 29}
+    ]
 }
 let book5 ={
     title: "Tomandjerry2",
     pageCount: 9990,
     genre: "animation",
-    authors: {
-        name: "pesPatron",
-        age: 27
-    }
+    authors: [
+        {name: "pesPatron", age: 27}
+    ]
 }
 let book6 = {
     title: "JSfordummies2",
     pageCount: 55,
     genre: "educational",
-    authors: {
-        name:"Hetman",
-        age:65
-    }
+    authors: [
+        {name:"Hetman", age:65}
+]
 
 }
 console.log(book4)
@@ -192,23 +189,12 @@ else if (a < b) {
  //   - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
  //       за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)//
 
-let x1 = 1;
+let x1 = 0;
+if (x1 === 0 || x1 ==="" || x1 ===null || x1 === undefined)
+{document.write("<p>default</p>")}
 
-switch (x1){
-    case "":
-        console.log("default")
-        break;
-    case null:
-        console.log("default")
-        break;
-    case undefined:
-        console.log("default")
-        break;
-    case 0:
-        console.log("default")
-        break;
 
-}
+
 
 
 
