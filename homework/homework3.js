@@ -103,14 +103,14 @@ while (y<arr3.length){
 //Масив:
 
    let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-
+document.write(`<ul>`)
 for (let i = 0; i < listOfItems.length; i++) {
     const loiElemennt = listOfItems[i];
-    document.write(`<ul>
+    document.write(`
 <li>${loiElemennt}</li>
-</ul>`)
+`)
 }
-
+document.write(`</ul>`)
 
 
 //    Використовуючи данні з масиву, за допомоги document.write та циклу
