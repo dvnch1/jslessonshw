@@ -33,7 +33,7 @@ let arr1 =[
 for (let i = 0; i < arr1.length; i++) {
     const arr1Elemennt = arr1[i];
     document.write(`<div>${arr1Elemennt.name}</div>`)
-        console.log(arr1Elemennt)
+        console.log(`${i}`)
 }
 
 //- За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
@@ -95,7 +95,7 @@ while (y<arr3.length){
     const arr3Elemennt = arr3[y];
     y++;
     document.write(`<h1>${arr3Elemennt.name}</h1>`)
-    console.log(arr3Elemennt);
+    console.log(`${y}`);
 }
 
 //- Використовуючи данні з масиву, за допомоги document.write та циклу
