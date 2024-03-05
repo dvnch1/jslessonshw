@@ -46,6 +46,16 @@ console.log(final)
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
 let nums = [11,21,3];
+function sortNums(arr,direction){
+    switch (direction){
+        case "ascending":
+            return arr.sort((a, b) => a - b);
+        case  "descending":
+            return arr.sort ((a, b) => b - a);
+    }
+}
+let m = sortNums(nums, "ascending")
+console.log(m)
 nums.sort((a, b) => a - b);
 nums.sort((a,b)=>b-a);
 
