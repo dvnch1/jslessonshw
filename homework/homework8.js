@@ -55,6 +55,7 @@ class Client{
         this.email = email;
         this.phone = phone;
         this.order = order;
+
     }
 }
 let clientBase = [
@@ -70,9 +71,6 @@ let clientBase = [
     new Client(10,"Tan","Yolanov","bgfss@mail.com","575732233",["cig","rambler"]),
 
 ]
-
-console.log(clientBase)
-
 let c = clientBase.sort(function (a, b){
     if (a.order.length > b.order.length){
         return 1;
@@ -82,6 +80,10 @@ let c = clientBase.sort(function (a, b){
     }
     return 0;
 })
+
+console.log(clientBase)
+
+
 console.log(c)
 
 //
@@ -99,40 +101,31 @@ function Car(model,company,year,maxSpeed,engine,driver=[]){
         this.maxSpeed = maxSpeed;
         this.engine = engine;
         this.addDriver = [""];
-        function drive() {
-        console.log("Їдемо" + " " + "зі" + " " + "швидкістю" +" "+ `${arr2.maxSpeed}`+ " "+ "на" + " " + "годину")
+        this.drive = function() {
+        console.log("Їдемо" + " " + "зі" + " " + "швидкістю" +" "+ `${this.maxSpeed}`+ " "+ "на" + " " + "годину")
+    }
+        this.info = function(){
+            document.write(
+                'модель'+` `+`${this.model}`,
+                "Виробник"+" "+ `${this.company}`,
+                "Рік Випуску"+" "+`${this.year}`,
+                "Максимальна Швидкість"+" "+ `${this.maxSpeed}`,
+                "Об'єм двигуна" +" "+`${this.engine}`
+            )
+        }
+        this.increaseMaxSpeed = function (newSpeed){
+            console.log(this.maxSpeed + newSpeed)}
+        this.changeYear = function  (newValue) {
+         console.log(this.year = newValue)
     }
 
-
 }
+
 let arr2 = new Car("Volvo","Japan","1999",180,"2.0");
-
-function drive() {
-    console.log("Їдемо" + " " + "зі" + " " + "швидкістю" +" "+ `${arr2.maxSpeed}`+ " "+ "на" + " " + "годину")
-}
-
-drive(arr2)
-function info(){
-    document.write(
-        'модель'+` `+`${arr2.model}`,
-        "Виробник"+" "+ `${arr2.company}`,
-        "Рік Випуску"+" "+`${arr2.year}`,
-        "Максимальна Швидкість"+" "+ `${arr2.maxSpeed}`,
-        "Об'єм двигуна" +" "+`${arr2.engine}`
-)
-}
-info(arr2)
-
-function increaseMaxSpeed (obj,newSpeed){
-   return  console.log(arr2.maxSpeed + newSpeed)
-}
-increaseMaxSpeed(arr2,100)
-
-function changeYear (obj,newValue) {
-    return console.log(arr2.year = newValue)
-}
-changeYear(arr2, 2002)
-
+arr2.increaseMaxSpeed(1000)
+arr2.drive()
+arr2.info()
+arr2.changeYear(5050)
 arr2.addDriver.push("12",23,"toyota")
 
 

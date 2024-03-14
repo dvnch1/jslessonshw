@@ -135,12 +135,12 @@ for (const simp of simpsons) {
     img.src = simp.photo;
     div4.appendChild(img)
 }
-
+//
 // =========================
 //     Цикл в циклі
 // - Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
 //
-// Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
+// // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 // ------------------
 let coursesArray = [
@@ -212,3 +212,37 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
+function createSingleBlock(blockObj,div5) {
+    const modules1 = blockObj.modules
+    const ul0 = document.createElement("ul")
+    document.body.appendChild(div5)
+    div5.appendChild(ul0)
+    for (const Element of modules1) {
+
+        modules(Element,ul0)
+    }
+}
+function modules(Element,ulName) {
+            const li0 = document.createElement("li")
+            const kkk = ulName.appendChild(li0)
+            kkk.innerText = `${Element}`
+
+    }
+
+function main (objList) {
+    for (const Element of objList) {
+        const divcourse = document.createElement("div")
+        document.body.appendChild(divcourse)
+        divcourse.classList.add("divcourse")
+        let h3 = document.createElement("h3")
+        divcourse.appendChild(h3)
+        h3.classList.add("h3")
+        h3.innerText = `${Element.title}`
+        let p2 = document.createElement("p")
+        divcourse.appendChild(p2)
+        p2.classList.add("p")
+        p2.innerText = `Курс триває - ${Element.monthDuration} місяців, Усього годин - ${Element.hourDuration}`
+        createSingleBlock(Element,divcourse)
+    }
+}
+ main(coursesArray)
