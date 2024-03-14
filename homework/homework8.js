@@ -99,6 +99,10 @@ function Car(model,company,year,maxSpeed,engine,driver=[]){
         this.maxSpeed = maxSpeed;
         this.engine = engine;
         this.addDriver = [""];
+        function drive() {
+        console.log("Їдемо" + " " + "зі" + " " + "швидкістю" +" "+ `${arr2.maxSpeed}`+ " "+ "на" + " " + "годину")
+    }
+
 
 }
 let arr2 = new Car("Volvo","Japan","1999",180,"2.0");
@@ -219,4 +223,4 @@ for (const key of popey) {
 }
 
 
-console.log(popey.find(c => c.size === 26));
+console.log(popey.find(c => c.size === we.foundsize));
