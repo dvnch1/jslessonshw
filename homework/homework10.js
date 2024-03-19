@@ -49,28 +49,86 @@ updateVisitCount();
 // при завантажені сторінки з'являються перші 10 об'єктів.
 //     При натисканні next виводяться настпні 10 об'єктів
 // При натисканні prev виводяться попередні 10 об'єктів
-//  let arr = [
-//      {name: "vano1"},{name: "vano13"},
-//      {name: "vano2"},{name: "vano14"},
-//      {name: "vano3"},{name: "vano15"},
-//      {name: "vano4"},{name: "vano16"},
-//      {name: "vano5"},{name: "vano17"},
-//      {name: "vano6"},{name: "vano18"},
-//      {name: "vano7"},{name: "vano19"},
-//      {name: "vano9"},{name: "vano20"},
-//      {name: "vano8"},{name: "vano21"},
-//      {name: "vano10"},{name: "vano22"},
-//      {name: "vano11"},{name: "vano23"},
-//      {name: "vano12"},{name: "vano24"},]
-//
-//
-//  let next = document.createElement("button")
-//  let prev = document.createElement("button")
-//  document.body.append(next,prev)
-//  next.innerText = "Next"
-//  prev.innerText = "Prev"
+  let arr = [
+      {name: "vano1"},{name: "vano2"},
+      {name: "vano3"},{name: "vano4"},
+      {name: "vano5"},{name: "vano6"},
+      {name: "vano7"},{name: "vano8"},
+      {name: "vano9"},{name: "vano10"},
+      {name: "vano11"},{name: "vano12"},
+      {name: "vano13"},{name: "vano14"},
+      {name: "vano15"},{name: "vano16"},
+      {name: "vano17"},{name: "vano18"},
+      {name: "vano19"},{name: "vano20"},
+      {name: "vano21"},{name: "vano22"},
+      {name: "vano23"},{name: "vano24"},
+      {name: "vano25"},{name: "vano26"},
+      {name: "vano27"},{name: "vano28"},
+      {name: "vano29"},{name: "vano30"},
+      {name: "vano31"},{name: "vano32"},
+      {name: "vano33"},{name: "vano34"},
+      {name: "vano35"},{name: "vano36"},
+      {name: "vano37"},{name: "vano38"},
+      {name: "vano39"},{name: "vano40"},
+      {name: "vano41"},{name: "vano42"},
+      {name: "vano43"},{name: "vano44"},
+      {name: "vano45"},{name: "vano46"},
+      {name: "vano47"},{name: "vano48"},
+      {name: "vano49"},{name: "vano50"},
+      {name: "vano51"},{name: "vano52"},
+      {name: "vano53"},{name: "vano54"},
+      {name: "vano55"},{name: "vano56"},
+      {name: "vano57"},{name: "vano58"},
+      {name: "vano59"},{name: "vano60"},
+      {name: "vano61"},{name: "vano62"},
+      {name: "vano63"},{name: "vano64"},
+      {name: "vano65"},{name: "vano66"},
+      {name: "vano67"},{name: "vano68"},
+      {name: "vano69"},{name: "vano70"},
+      {name: "vano71"},{name: "vano72"},
+      {name: "vano73"},{name: "vano74"},
+      {name: "vano75"},{name: "vano76"},
+      {name: "vano77"},{name: "vano78"},
+      {name: "vano79"},{name: "vano80"},
+      {name: "vano81"},{name: "vano82"},
+      {name: "vano83"},{name: "vano84"},
+      {name: "vano85"},{name: "vano86"},
+      {name: "vano87"},{name: "vano88"},
+      {name: "vano89"},{name: "vano90"},
+      {name: "vano91"},{name: "vano92"},
+      {name: "vano93"},{name: "vano94"},
+      {name: "vano95"},{name: "vano96"},
+  ]
 
+let start = 0;
+let step = 10;
+let limit = start + step
+
+
+
+  let next = document.createElement("button")
+  let prev = document.createElement("button")
+  document.body.append(next,prev)
+  next.innerText = "Next"
+  prev.innerText = "Prev"
+next.onclick = function () {
+    for (let i = start; i < limit; i++){
+        console.log(arr[i])
+    }
+    start = limit;
+    limit = start + step;
+};
+prev.onclick = function (){
+    let revArr = arr.reverse()
+
+    for (let i = start; i < limit; i++){
+        console.log(revArr[i])
+    }
+    start = limit;
+    limit = start + step;
+}
 // //
+
 // //
 // //
 // //
